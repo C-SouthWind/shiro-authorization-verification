@@ -11,27 +11,26 @@
  Target Server Version : 50717
  File Encoding         : 65001
 
- Date: 17/04/2020 17:12:57
+ Date: 17/04/2020 17:13:08
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
--- Table structure for user
+-- Table structure for role
 -- ----------------------------
-DROP TABLE IF EXISTS `user`;
-CREATE TABLE `user`  (
-  `uid` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`uid`) USING BTREE
+DROP TABLE IF EXISTS `role`;
+CREATE TABLE `role`  (
+  `rid` int(11) NOT NULL AUTO_INCREMENT,
+  `rolename` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`rid`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of user
+-- Records of role
 -- ----------------------------
-INSERT INTO `user` VALUES (1, '张三', '123');
-INSERT INTO `user` VALUES (2, '李四', '123');
+INSERT INTO `role` VALUES (1, 'user:add');
+INSERT INTO `role` VALUES (2, 'user:update');
 
 SET FOREIGN_KEY_CHECKS = 1;

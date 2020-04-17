@@ -41,4 +41,8 @@ public class LoginController {
         }
         return "login";
     }
+    @GetMapping("/add")
+    public String add(){
+        return "useradd";
+    }
 }

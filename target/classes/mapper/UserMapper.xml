@@ -6,6 +6,14 @@
     <result column="username" property="username" jdbcType="VARCHAR" />
     <result column="password" property="password" jdbcType="VARCHAR" />
   </resultMap>
+
+  <resultMap id="BaseResultMap1" type="com.chj.model.vo.UserVo" >
+    <id column="uid" property="uid" jdbcType="INTEGER" />
+    <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="password" property="password" jdbcType="VARCHAR" />
+    <result column="rolename" property="rolename" jdbcType="VARCHAR" />
+  </resultMap>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from user
     where uid = #{uid,jdbcType=INTEGER}
@@ -32,6 +40,13 @@
     select uid, username, password
     from user
     where username=#{username,jdbcType=VARCHAR}
+  </select>
+  <select id="selectByUserName" resultMap="BaseResultMap1" parameterType="java.lang.String">
+    select u.uid,u.username,u.password,r.rolename
+    from user u
+    join user_role ur on u.uid = ur.userid
+    join role r on r.rid = ur.roleid
+    where u.username  = #{username,jdbcType=VARCHAR}
   </select>
   <select id="selectAll" resultMap="BaseResultMap" >
     select uid, username, password
