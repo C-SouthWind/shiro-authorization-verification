@@ -9,6 +9,10 @@ public class User implements Serializable {
 
     private String password;
 
+    private String salt;
+
+    private String state;
+
     private static final long serialVersionUID = 1L;
 
     public Integer getUid() {
@@ -33,5 +37,21 @@ public class User implements Serializable {
 
     public void setPassword(String password) {
         this.password = password == null ? null : password.trim();
+    }
+
+    public String getSalt() {
+        return salt;
+    }
+
+    public void setSalt(String salt) {
+        this.salt = salt == null ? null : salt.trim();
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state == null ? null : state.trim();
     }
 }

@@ -3,12 +3,15 @@ package com.chj.config;
 
 import at.pollux.thymeleaf.shiro.dialect.ShiroDialect;
 import org.apache.commons.collections.map.LinkedMap;
+import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
+import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import java.util.Map;
+import java.util.SimpleTimeZone;
 
 /**
  * @author ：chj
@@ -17,13 +20,33 @@ import java.util.Map;
  */
 @SpringBootApplication
 public class ShiroConfig {
+
+    /**
+     * 自定义shiro加密方式
+     */
+   @Bean(name = "hashedCredentialsMatcher")
+    public HashedCredentialsMatcher hashedCredentialsMatcher(){
+        HashedCredentialsMatcher hashedCredentialsMatcher = new HashedCredentialsMatcher();
+        hashedCredentialsMatcher.setHashAlgorithmName("MD5");
+        hashedCredentialsMatcher.setHashIterations(1024);
+        hashedCredentialsMatcher.setStoredCredentialsHexEncoded(true);
+        return hashedCredentialsMatcher;
+    }
+  /*  加密密码
+    public static void main(String[] args) {
+        SimpleHash simpleHash = new SimpleHash("MD5", "123456", "zhangsan", 1024);
+        System.out.println(simpleHash);
+    }
+    */
     /**
      * 定义自己的Realm
      * @return
      */
     @Bean(name = "shiroRealm")
    public ShiroRealm shiroRealm(){
-        return new ShiroRealm();
+        ShiroRealm shiroRealm = new ShiroRealm();
+        shiroRealm.setCredentialsMatcher(hashedCredentialsMatcher());
+        return shiroRealm;
     }
 
     /**

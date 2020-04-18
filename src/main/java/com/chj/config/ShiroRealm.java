@@ -13,6 +13,7 @@ import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.subject.Subject;
+import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
@@ -35,7 +36,7 @@ public class ShiroRealm extends AuthorizingRealm {
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
         Subject subject = SecurityUtils.getSubject();
         String principal = (String)subject.getPrincipal();
-        List<UserVo> userVos = userService.selectByUserName(principal);
+        List<UserVo> userVos = userService.selectRoleByUserName(principal);
         SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo();
         for(UserVo userVo : userVos){
             simpleAuthorizationInfo.addStringPermission(userVo.getRolename());
@@ -52,9 +53,10 @@ public class ShiroRealm extends AuthorizingRealm {
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
         String principal = (String)token.getPrincipal();
-        User user = userService.selectByName(principal);
+        User user = userService.selectUserByName(principal);
         if (null != user) {
-            SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(user.getUsername(), user.getPassword(), this.getName());
+            ByteSource bytes = ByteSource.Util.bytes(user.getSalt());
+            SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(user.getUsername(), user.getPassword(),bytes,this.getName());
             return info;
         }
         return null;

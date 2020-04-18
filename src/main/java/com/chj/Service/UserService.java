@@ -23,8 +23,8 @@ public class UserService {
      * @param username
      * @return
      */
-    public User selectByName(String username){
-        return userMapper.selectByName(username);
+    public User selectUserByName(String username){
+        return userMapper.selectUserByName(username);
     }
 
     /**
@@ -32,7 +32,7 @@ public class UserService {
      * @param username
      * @return
      */
-    public List<UserVo> selectByUserName(String username){
-        return userMapper.selectByUserName(username);
+    public List<UserVo> selectRoleByUserName(String username){
+        return userMapper.selectRoleByUserName(username);
     }
 }

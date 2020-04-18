@@ -45,7 +45,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/1227-springboot-maven (3)/1227-springboot-maven/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../20200406-shiro/pom.xml" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -55,16 +55,33 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.chj.model" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\IdeaWork\20200417-shiro-authorization-verification\src\main\resources" />
       <recent name="F:\IdeaWork\20200417-shiro-authorization-verification\src\main\java\com" />
       <recent name="F:\IdeaWork\20200417-shiro-authorization-verification\src\main\java" />
-      <recent name="F:\IdeaWork\20200417-shiro-authorization-verification\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.ShiroConfig">
+    <configuration name="ShiroConfig" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="20200417-shiro-authorization-verification" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chj.config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chj.config.ShiroConfig" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="20200417-shiro-authorization-verification" />
       <extension name="coverage">
@@ -80,6 +97,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.ShiroConfig" />
         <item itemvalue="Spring Boot.WebApplication" />
       </list>
     </recent_temporary>
@@ -95,6 +113,7 @@
       <option name="presentableId" value="Default" />
       <updated>1587089987108</updated>
       <workItem from="1587090001781" duration="7636000" />
+      <workItem from="1587170001188" duration="6568000" />
     </task>
     <servers />
   </component>
@@ -106,42 +125,66 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="604" y="83" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1587112475046" />
-    <state x="637" y="150" key="FileChooserDialogImpl" timestamp="1587114054489">
+    <state x="637" y="150" key="FileChooserDialogImpl" timestamp="1587176115361">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="637" y="150" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1587114054489" />
-    <state width="1094" height="154" key="GridCell.Tab.0.bottom" timestamp="1587114634399">
+    <state x="637" y="150" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1587176115361" />
+    <state width="1094" height="141" key="GridCell.Tab.0.bottom" timestamp="1587176701946">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1094" height="154" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1587114634399" />
-    <state width="1094" height="154" key="GridCell.Tab.0.center" timestamp="1587114634398">
+    <state width="1094" height="141" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1587176701946" />
+    <state width="1094" height="141" key="GridCell.Tab.0.center" timestamp="1587176701946">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1094" height="154" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1587114634398" />
-    <state width="1094" height="154" key="GridCell.Tab.0.left" timestamp="1587114634398">
+    <state width="1094" height="141" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1587176701946" />
+    <state width="1094" height="141" key="GridCell.Tab.0.left" timestamp="1587176701945">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1094" height="154" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1587114634398" />
-    <state width="1094" height="154" key="GridCell.Tab.0.right" timestamp="1587114634399">
+    <state width="1094" height="141" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1587176701945" />
+    <state width="1094" height="141" key="GridCell.Tab.0.right" timestamp="1587176701946">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1094" height="154" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1587114634399" />
-    <state width="1094" height="154" key="GridCell.Tab.1.bottom" timestamp="1587114634399">
+    <state width="1094" height="141" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1587176701946" />
+    <state width="1094" height="141" key="GridCell.Tab.1.bottom" timestamp="1587176701946">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1094" height="154" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1587114634399" />
-    <state width="1094" height="154" key="GridCell.Tab.1.center" timestamp="1587114634399">
+    <state width="1094" height="141" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1587176701946" />
+    <state width="1094" height="141" key="GridCell.Tab.1.center" timestamp="1587176701946">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1094" height="154" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1587114634399" />
-    <state width="1094" height="154" key="GridCell.Tab.1.left" timestamp="1587114634399">
+    <state width="1094" height="141" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1587176701946" />
+    <state width="1094" height="141" key="GridCell.Tab.1.left" timestamp="1587176701946">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1094" height="154" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1587114634399" />
-    <state width="1094" height="154" key="GridCell.Tab.1.right" timestamp="1587114634399">
+    <state width="1094" height="141" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1587176701946" />
+    <state width="1094" height="141" key="GridCell.Tab.1.right" timestamp="1587176701946">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1094" height="154" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1587114634399" />
+    <state width="1094" height="141" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1587176701946" />
+    <state width="1323" height="183" key="GridCell.Tab.2.bottom" timestamp="1587176472240">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="183" key="GridCell.Tab.2.bottom/0.0.1366.738@0.0.1366.738" timestamp="1587176472240" />
+    <state width="1323" height="183" key="GridCell.Tab.2.center" timestamp="1587176472240">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="183" key="GridCell.Tab.2.center/0.0.1366.738@0.0.1366.738" timestamp="1587176472240" />
+    <state width="1323" height="183" key="GridCell.Tab.2.left" timestamp="1587176472240">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="183" key="GridCell.Tab.2.left/0.0.1366.738@0.0.1366.738" timestamp="1587176472240" />
+    <state width="1323" height="183" key="GridCell.Tab.2.right" timestamp="1587176472240">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="183" key="GridCell.Tab.2.right/0.0.1366.738@0.0.1366.738" timestamp="1587176472240" />
+    <state x="404" y="110" width="564" height="524" key="StructurePopup" timestamp="1587175018837">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="404" y="110" width="564" height="524" key="StructurePopup/0.0.1366.738@0.0.1366.738" timestamp="1587175018837" />
+    <state x="398" y="204" key="com.intellij.ide.util.TipDialog" timestamp="1587170001957">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="398" y="204" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1587170001957" />
     <state x="0" y="142" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1587096416592">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -150,5 +193,16 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="442" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1587109594807" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.5.1/shiro-core-1.5.1-sources.jar!/org/apache/shiro/realm/AuthenticatingRealm.java</url>
+          <line>579</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
