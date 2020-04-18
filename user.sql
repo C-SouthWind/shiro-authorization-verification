@@ -11,7 +11,7 @@
  Target Server Version : 50717
  File Encoding         : 65001
 
- Date: 18/04/2020 10:25:43
+ Date: 18/04/2020 10:37:46
 */
 
 SET NAMES utf8mb4;
@@ -28,12 +28,13 @@ CREATE TABLE `user`  (
   `salt` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `state` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`uid`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
 INSERT INTO `user` VALUES (1, 'zhangsan', '2a0d136ceacafe198ea64ac09daaf1b6', 'zhangsan', '1');
-INSERT INTO `user` VALUES (2, 'lisi', '8c702ae443795331c91cfab48f3f3833', 'lisi', '2');
+INSERT INTO `user` VALUES (2, 'lisi', '8c702ae443795331c91cfab48f3f3833', 'lisi', '1');
+INSERT INTO `user` VALUES (3, 'wangwu', '1a1c20f725621237a8620b7287987623', 'wangwu', '0');
 
 SET FOREIGN_KEY_CHECKS = 1;

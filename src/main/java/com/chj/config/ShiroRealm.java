@@ -4,10 +4,7 @@ import com.chj.Service.UserService;
 import com.chj.model.User;
 import com.chj.model.vo.UserVo;
 import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authc.AuthenticationException;
-import org.apache.shiro.authc.AuthenticationInfo;
-import org.apache.shiro.authc.AuthenticationToken;
-import org.apache.shiro.authc.SimpleAuthenticationInfo;
+import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
@@ -54,11 +51,13 @@ public class ShiroRealm extends AuthorizingRealm {
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
         String principal = (String)token.getPrincipal();
         User user = userService.selectUserByName(principal);
-        if (null != user) {
-            ByteSource bytes = ByteSource.Util.bytes(user.getSalt());
-            SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(user.getUsername(), user.getPassword(),bytes,this.getName());
-            return info;
+        if (null == user) {
+            throw new UnknownAccountException("此用户不存在" + principal);
         }
-        return null;
+        if (Integer.valueOf(user.getState()) == 0) {
+            throw new LockedAccountException("此用户被锁定"+principal);
+        }
+        SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(user.getUsername(), user.getPassword(),ByteSource.Util.bytes(user.getSalt()),this.getName());
+        return info;
     }
 }

@@ -34,10 +34,10 @@ public class ShiroConfig {
     }
   /*  加密密码
     public static void main(String[] args) {
-        SimpleHash simpleHash = new SimpleHash("MD5", "123456", "zhangsan", 1024);
+        SimpleHash simpleHash = new SimpleHash("MD5", "123456", "wangwu", 1024);
         System.out.println(simpleHash);
     }
-    */
+*/
     /**
      * 定义自己的Realm
      * @return
