@@ -72,7 +72,7 @@ public class ShiroConfig {
         shiroFilterFactoryBean.setSuccessUrl("/index");
         Map<String,String> filter = new LinkedMap();
         filter.put("logout","logout");
-
+        //filter.put("/static/*","anon");
        /* 基于角色的权限控制
         filter.put("/user/add", "roles[buyer]");
         filter.put("/user/update", "roles[salesman]");
